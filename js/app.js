@@ -35,9 +35,8 @@ function sortear(){
     }
     let tamanhoLista = listaAmigos.length;
     for(let i = 0; i < tamanhoLista; i++){
-        do{
-            let x = parseInt(Math.random()*listaAmigos.length);
-            amigo1 = listaAmigos[x];
+        do{         
+            amigo1 = listaAmigos[parseInt(Math.random()*listaAmigos.length)];
             if(listaAmigos.length == 2){
                 for(let j = 0; j < 2; j++){
                     if(listaAmigos[j]== listaRecebe[j]){
@@ -45,8 +44,7 @@ function sortear(){
                     } 
                 }
             }
-            let y = parseInt(Math.random()*listaRecebe.length);
-            amigo2 = listaRecebe[y];      
+            amigo2 = listaRecebe[parseInt(Math.random()*listaRecebe.length)];      
         }while(amigo1 == amigo2);
         listaRecebe = listaRecebe.filter(element => element != amigo2);
         listaAmigos = listaAmigos.filter(element => element != amigo1);
