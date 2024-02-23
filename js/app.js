@@ -10,6 +10,12 @@ function adicionar(){
     if(amigo == ''){
         return;
     }
+    for(let i = 0; i < listaAmigos.length; i++){
+        if(amigo == listaAmigos[i]){
+            alert("Amigo ja adicionado");
+            return;
+        }
+    }
     listaAmigos.push(' ' + amigo);
     listaRecebe.push(' ' + amigo); 
     // console.log(listaAmigos, amigosIcluidos);
